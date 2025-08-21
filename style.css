@@ -4,11 +4,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Outfit", sans-serif;
 }
 
 body {
     background-color: #f0f0f0;
+    font-family: "Outfit", sans-serif;
+
 }
 
 header {
@@ -185,6 +186,8 @@ footer {
     color: #fff;
     font-size: 14px;
     padding: 2rem;
+    font-family: "Pacifico", cursive;
+
 }
 
 

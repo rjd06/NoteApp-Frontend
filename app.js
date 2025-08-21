@@ -3,6 +3,10 @@ const showFormBtn = document.getElementById("show-form-btn");
 const hideFormButton = document.getElementById("close-form-btn");
 const noteForm = document.getElementById("note-form");
 
+const editOverlay = document.getElementById("edit-overlay");
+const editForm = document.getElementById("edit-form");
+const hideEditBtn = document.getElementById("close-edit-btn");
+
 const BASE_API_URL = "https://noteapp-ovs5.onrender.com/api/"
 
 // show form
@@ -14,6 +18,13 @@ showFormBtn.addEventListener("click", ()=>{
 hideFormButton.addEventListener("click", ()=>{
     overlay.style.display = "none";
 });
+
+// hide edit form
+hideEditBtn.addEventListener("click", ()=>{
+    editOverlay.style.display = "none";
+});
+
+
 
 // form submission
 noteForm.addEventListener("submit", (e) => {

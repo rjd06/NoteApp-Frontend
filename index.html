@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NotesApp - Let's Keep Your Plans</title>
     <!-- font awesome cdn  -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- style sheet is connect here  -->
     <link rel="stylesheet" href="style.css">
@@ -22,7 +24,7 @@
     <main>
         <div class="overlay" id="overlay">
             <form action="" id="note-form">
-            <button type="button" id="close-form-btn"  class="close-form"><i class="fa-solid fa-xmark"></i></button>
+                <button type="button" id="close-form-btn" class="close-form"><i class="fa-solid fa-xmark"></i></button>
 
                 <h2><i class="fa-solid fa-plus"></i> Add Note</h2>
                 <hr>
@@ -31,12 +33,23 @@
                 <button type="submit"><i class="fa-solid fa-plus"></i> Save</button>
             </form>
         </div>
+        <div class="overlay" id="edit-overlay">
+            <form action="" id="edit-form">
+                <button type="button" id="close-edit-btn" class="close-form"><i class="fa-solid fa-xmark"></i></button>
+
+                <h2><i class="fa-solid fa-pencil"></i> Edit Note</h2>
+                <hr>
+                <input type="text" placeholder="Enter Title">
+                <textarea name="" id="" placeholder="Enter Content"></textarea>
+                <button type="submit"><i class="fa-solid fa-file"></i> Save</button>
+            </form>
+        </div>
 
         <div class="notes-container">
-            
+
             <div class="notes">
                 <!-- Notes will be dynamically added here -->
-                
+
                 <!-- <div class="note">
                     <h3>Note Title</h3>
                     <hr>
@@ -51,7 +64,8 @@
     </main>
 
     <footer>
-        <p>iNotes Powered by Rajdev Yadav</p>
+        <p>SecretNote Powered by Rajdev Yadav</p>
+        <p>All Rights Reserved.</p>
     </footer>
     <!-- script is linked here  -->
     <script src="app.js"></script>
