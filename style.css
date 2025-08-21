@@ -172,4 +172,8 @@ footer {
     form {
         width: 90%;
     }
+
+    .notes-container {
+        width: 90%;
+    }
 }
