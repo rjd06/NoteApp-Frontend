@@ -1,31 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Outfit", sans-serif;
 }
-body{
+
+body {
     background-color: #f0f0f0;
 }
+
 header {
     background-color: #d65151;
     padding: 20px;
     text-align: center;
 }
 
-h1 {
+header h1 {
     font-family: "Pacifico", cursive;
     font-size: 2.5rem;
-    margin-bottom: 10px;
     color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.47);
 }
-main{
+
+header p {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.47);
+    font-family: "Pacifico", cursive;
+
+}
+
+main {
     min-height: 90vh;
     width: 100%;
 }
-.overlay{
+
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,9 +46,10 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
-form{
+form {
     width: 30%;
     margin: 1rem auto;
     display: flex;
@@ -48,9 +60,9 @@ form{
     color: #c54040;
     border-radius: 10px;
     position: relative;
-
 }
-.close-form{
+
+.close-form {
     position: absolute;
     top: -15px;
     right: -15px;
@@ -58,20 +70,25 @@ form{
     cursor: pointer;
     border-radius: 50%;
 }
-form input{
+
+form input {
     height: 50px;
 }
-form textarea{
+
+form textarea {
     height: 150px;
     resize: none;
 }
-form input, form textarea{
+
+form input,
+form textarea {
     padding: 10px 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
 }
-form button{
+
+form button {
     background-color: #d65151;
     color: #fff;
     border: none;
@@ -81,14 +98,78 @@ form button{
     font-size: 16px;
     height: 50px;
 }
-form button:hover{
+
+form button:hover {
     background-color: #c54040;
 }
-footer{
+
+.notes-container {
+    width: 50%;
+    margin: 1rem auto;
+    color: #414040;
+}
+
+.notes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.note {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.313);
+    min-height: 200px;
+    position: relative;
+}
+
+.note button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #d65151;
+    transition: color 0.3s;
+    position: absolute;
+}
+
+.note button:hover {
+    color: #c54040;
+}
+
+.note .edit-note {
+    top: 10px;
+    right: 40px;
+}
+
+.note .delete-note {
+    top: 10px;
+    right: 10px;
+}
+
+.note h3 {
+    color: #d65151;
+}
+
+.note p {
+    color: #414040;
+    margin-top: 0.5rem;
+    white-space: pre-wrap;
+}
+
+footer {
     background-color: #414040;
     padding: 10px;
     text-align: center;
     color: #fff;
     font-size: 14px;
     padding: 2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    form {
+        width: 90%;
+    }
 }
