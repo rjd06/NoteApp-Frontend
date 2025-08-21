@@ -41,7 +41,7 @@ noteForm.addEventListener("submit", (e) => {
         };
 
         createNote(noteData);
-
+       
         // Clear the form
         noteForm.reset();
         overlay.style.display = "none";
@@ -63,6 +63,7 @@ editForm.addEventListener("submit", (e) => {
         };
 
         editNote(noteId, noteData);
+        
 
         // Clear the form
         editForm.reset();
@@ -74,7 +75,7 @@ editForm.addEventListener("submit", (e) => {
 const fetchAllNotes = async () => {
     const res = await fetch(`${BASE_API_URL}notes`);
     const data = await res.json();
-    console.log(data);
+    
     const notesContainer = document.querySelector(".notes");
     notesContainer.innerHTML = ""; // Clear existing notes
     data.forEach(note => {
@@ -118,8 +119,7 @@ const createNote = async (noteData) => {
         body: JSON.stringify(noteData)
     });
     const data = await res.json();
-    console.log(data);
-    return data;
+    fetchAllNotes(); // Refresh notes after creation
 };
 
 // edit note
@@ -132,8 +132,7 @@ const editNote = async (noteId, noteData) => {
         body: JSON.stringify(noteData)
     });
     const data = await res.json();
-    console.log(data);
-    return data;
+   fetchAllNotes(); // Refresh notes after editing
 };
 // delete note
 const deleteNote = async (noteId) => {
