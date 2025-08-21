@@ -158,6 +158,24 @@ form button:hover {
     white-space: pre-wrap;
 }
 
+.add-note-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding:  20px;
+    cursor: pointer;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background-color: #d65151;
+    color: #fff;
+    z-index: 9;
+}
+
+.add-note-btn:hover {
+    background-color: #c54040;
+}
+
 footer {
     background-color: #414040;
     padding: 10px;
