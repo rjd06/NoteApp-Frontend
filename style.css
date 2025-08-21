@@ -47,6 +47,16 @@ form{
     padding: 1rem;
     color: #c54040;
     border-radius: 10px;
+    position: relative;
+
+}
+.close-form{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
 }
 form input{
     height: 50px;
